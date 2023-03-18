@@ -2,7 +2,7 @@
 include_once "conexion.php"
 $conn = mysqli_connect($host,$user,$pw,$db)
 
-if(isset($_SESSION['idusuario'])==false){
+if(isset($_SESSION['idcarta'])==false){
   header("Location:index.php");
 }
 
@@ -48,7 +48,7 @@ if(isset($_SESSION['idusuario'])==false){
 
                 include_once "conexion.php";
                 $conn=mysqli_connect($host,$user,$pw,$db);
-                $sql="SELECT * FROM usuarios;";
+                $sql="SELECT * FROM carta;";
                 $result=mysqli_query($conn,$sql);
 
                 //estructura de bulce while
@@ -60,10 +60,10 @@ if(isset($_SESSION['idusuario'])==false){
                     <td><?php echo $row['Producto']?></td>
                     <td><?php echo $row['Precio']?></td>
                     <td><?php echo $row['Imagen']?></td>
-                    <td> <a href="panel.php?modulo=editarUsuario&idusuario=<?php echo $row['idusuario']?>"
+                    <td> <a href="panel.php?modulo=editarUsuario&idcarta=<?php echo $row['idproducto']?>"
                     style="margin-right:10px;"title="Editar Usuario">Editar Usuario</a> 
 
-                    <a href="panel.php?modulo=usuarios&idborrar=<?php echo $row['idusuario']?>"
+                    <a href="panel.php?modulo=usuarios&idborrar=<?php echo $row['idcarta']?>"
                     style="margin-right:10px;"title="Borrar Usuario">Borar Usuario</a> 
                   </td>
                   </tr>

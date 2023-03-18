@@ -60,7 +60,7 @@ if(isset($_SESSION['idcarta'])==false){
                     <td><?php echo $row['Producto']?></td>
                     <td><?php echo $row['Precio']?></td>
                     <td><?php echo $row['Imagen']?></td>
-                    <td> <a href="panel.php?modulo=editarUsuario&idcarta=<?php echo $row['idproducto']?>"
+                    <td> <a href="panel.php?modulo=editarUsuario&idcarta=<?php echo $row['idcliente']?>"
                     style="margin-right:10px;"title="Editar Usuario">Editar Usuario</a> 
 
                     <a href="panel.php?modulo=usuarios&idborrar=<?php echo $row['idcarta']?>"

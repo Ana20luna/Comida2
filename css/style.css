@@ -8,8 +8,8 @@ body{
     overflow-x: hidden;/*oculta la barra horizontal*/
 }
 .logo {
-    width: 70px;
-    height: 70px;
+    width: 165px;
+    height: 140px;
 
 }
 
@@ -19,7 +19,7 @@ body{
 }
 
 .alto {
-    height: 800px;
+    height: 650px;
 }
 
 /*imagenes para la carta*/
@@ -39,7 +39,7 @@ body{
     background-color: #FAB327;
 }
 
-#login .titulo{
+#Servicios .titulo{
     width: 100%;
     text-align: center
 }

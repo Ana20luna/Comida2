@@ -266,7 +266,7 @@ $modulo =$_REQUEST['modulo'] ?? '';
               <a href="panel.php?modulo=libros" 
                 class="nav-link <?php echo ($modulo="libros"|| $modulo="crearlibro" ||$modulo="editarlibros")?" active":" ";?>">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Libros</p>
+                  <p>Platos</p>
                </a>
               </li>
               <li class="nav-item">

@@ -83,3 +83,14 @@ footer{
     color: aliceblue;
     padding: 15px 0;
 }
+
+#carta h2{
+    width: 100%;
+    text-align: center;
+   
+
+}
+
+#carta {
+    padding-top: 200px !important;
+}

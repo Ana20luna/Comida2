@@ -36,6 +36,8 @@
             <a class="nav-link" href="#Servicios">Servicios</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="consultaproductos.php">Consulta Productos</a>
+          <li class="nav-item">
             <a class="nav-link" href="#Contacto">Contacto</a>
           </li>
           <li class="nav-item">

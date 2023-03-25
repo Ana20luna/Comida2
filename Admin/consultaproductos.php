@@ -1,10 +1,10 @@
-<?php
-include_once "conexion.php"
+<?php 
+include_once "admin/conexion.php"
 $conn = mysqli_connect($host,$user,$pw,$db)
 
-if(isset($_SESSION['idcarta'])==false){
-  header("Location:index.php");
-}
+// if(isset($_SESSION['idcusuario'])==false){
+  // header("Location:index.php");
+
 
 
 ?>

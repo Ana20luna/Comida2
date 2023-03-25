@@ -31,20 +31,35 @@ if(isset($_SESSION['idcarta'])==false){
 
                <!--tabla para mostar los datos del usuario-->
 
-               <table class="table table-bordered"><thead>
+               <div class="row ow-cols-1 row-cols-md-4 g-4 p-5" id="productos">
+        <H2>Productos</H2>
+        <div class="col">
+            <?php
+            include_once "conexion.php";
+            //crear la conexión a la bd
+            $conn = mysqli_connect($host, $user, $pw, $db);
+            //crear una consulta a la base de datos
+            $sql = "SELECT * FROM productos;";
+            //preparar el array de resultados
+            $resul = mysqli_query($conn, $sql);
+            //estructura de loop para imprimir n datos while
+            while ($row = mysqli_fetch_assoc($resul)) {
+            ?>
+      
+            <div class="card">
+                <?php echo "<img src='imagenes/" .$row['imagen']."' width='100%' heigth='380'>";""?>
+                <div class="card-body">
+                    <h5 class="card-tittle"><?php echo $row['nombreProducto']?></h5>
+                    <p><span>$<?php echo $row['precio']?></span></p>
+                    <a href="https://wa.me/3043685787?text=%C2%BFDe%20qu%C3%A9%20te%20deseas%20antojar%20hoy%3F" class="btn btn-danger" target="_blank"> Pedir</a>              
+                </div>
+            </div>
+        </div>
+        <?php
+            }
+        ?>
+    </div>
 
-               <tr>
-                <th>Nombre</th>
-                <th>Email</th>
-                <th>Producto</th>
-                <th>Crear Usuario<a href="panel.php?modulo=crearusuario"
-                title="Crear Usuario"> <i clas="fas fa-user-plus"></i></a>
-                <th>
-               </tr>
-               </thead>
-
-               <tbody>
-                <?php
 
                 include_once "conexion.php";
                 $conn=mysqli_connect($host,$user,$pw,$db);

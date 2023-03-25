@@ -78,7 +78,8 @@
             ?>
       
             <div class="card">
-                <?php echo "<img src='imagenes/" .$row['Imagen']."' width='100%' heigth='380'>";""?>
+                <?php echo "<img src='imagenes/" .$row['Imagen']."' class='Img responsive rounde Img'>".""?>
+
                 <div class="card-body">
                     <h5 class="card-tittle"><?php echo $row['Producto']?></h5>
                     <p><span>$<?php echo $row['Precio']?></span></p>

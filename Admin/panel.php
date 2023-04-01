@@ -125,7 +125,7 @@
             </a>
           </li>
           <li class="nav-item has-treeview">
-            <a href="panel.php?modulo=Productos" class="nav-link <?php echo ($modulo=="Productos" || $modulo=="crearProductos" || $modulo=="editarLibro")? " active":" ";?>">
+            <a href="panel.php?modulo=Productos" class="nav-link <?php echo ($modulo=="Productos" || $modulo=="crearProductos" || $modulo=="editarProducto")? " active":" ";?>">
              <i class="fas fa-book nav-icon"></i>
               <p>
                 Productos
@@ -157,16 +157,16 @@
        <?php
      }
      //usuarios
-     if($modulo =="usuarios"){
-       include_once "consultausuarios.php";
+     if($modulo =="usuario"){
+      include_once "consultausuarios.php";
      }
 
-     if($modulo =="crearUsuario"){
-      include_once "crearUsuario.php";
+     if($modulo =="crearusuario"){
+      include_once "crearusuario.php";
     }
 
-    if($modulo =="editarUsuario"){
-      include_once "editarUsuario.php";
+    if($modulo =="editarusuario"){
+      include_once "editarusuario.php";
     }
 
     //Productos 

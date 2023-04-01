@@ -84,7 +84,7 @@
     <!-- Brand Logo -->
     <a href="panel.php" class="brand-link">
       
-      <span class="brand-text font-weight-light">Libreria</span>
+      <span class="brand-text font-weight-light">Restaurante</span>
     </a>
 
     <!-- Sidebar -->
@@ -171,7 +171,7 @@
 
     //Productos 
     if($modulo=="Productos"){
-      include_once "Productos.php";
+      include_once "consultaproductos.php";
     }
 
     if($modulo=="crearProducto"){

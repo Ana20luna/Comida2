@@ -14,13 +14,13 @@ if(isset($_REQUEST['idBorrar'])){
     if($result){
       ?>
       <div class="alert alert-success contents float-right" role="alert">
-        Plato Eliminado!!     
+        Producto Eliminado!!     
        </div>
        <?php
     }else{
       ?>
        <div class="alert alert-warning float-right" role="alert">
-        Error en eliminar Plato!! <?php echo $mysqli_error($conn);?>    
+        Error en eliminar Producto!! <?php echo $mysqli_error($conn);?>    
        </div>
        <?php
     }
@@ -53,11 +53,11 @@ if(isset($_REQUEST['idBorrar'])){
                             <thead>
                                 <tr>
                                     <th>Nombre</th>
-                                    <th>ISBN</th>
+                                    
                                     <th>Precio</th>
                                     <th>Imagen</th>
-                                    <th>Descripción</th>
-                                    <th>Crear Libro <a href="panel.php?modulo=crearLibro" title="Crear Libro"><i
+                                   
+                                    <th>Crear Producto <a href="panel.php?modulo=crearproducto" title="Crear Producto"><i
                                                 class="fas fa-user-plus"></i></a>
                                     </th>
                                 </tr>
@@ -67,7 +67,7 @@ if(isset($_REQUEST['idBorrar'])){
                                 <?php
                                     include_once 'conexion.php';
                                     $conn=mysqli_connect($host,$user,$pw,$db);
-                                    $sql="SELECT * FROM libros;";
+                                    $sql="SELECT * FROM Usuario;";
                                     $result=mysqli_query($conn,$sql);
                                     
                                     //estructura de bucle while
@@ -77,14 +77,12 @@ if(isset($_REQUEST['idBorrar'])){
                                     ?>
                                <tr>
                             <td><?php echo $row['nombre'] ?> </td>                  
-                            <td><?php echo $row['isbn'] ?></td>
+                           
                             <td><?php echo $row['precio'] ?></td>
                             <td><?php echo "<img src='".$row['imagen']."' width='50' >";"" ?></td>                 
-                            <td><?php echo $row['descripcion'] ?></td>
-                            
                             <td>
-                                <a href="panel.php?modulo=editarLibro&idlibro=<?php echo $row['idlibro']?>"style="margin-right:5px"><i class="fas fa-book-reader" title="Editar Libro"></i></a>
-                                <a href="panel.php?modulo=libros&idBorrar=<?php echo $row['idlibro']?>" style="margin-right:5px" class="fas fa-ban borrarLibro" title="Borrar Libro"></a>
+                                <a href="panel.php?modulo=editarLibro&idlibro=<?php echo $row['idusuario']?>"style="margin-right:5px"><i class="fas fa-book-reader" title="Editar Usuario"></i></a>
+                                <a href="panel.php?modulo=Usuario&idBorrar=<?php echo $row['idusuario']?>" style="margin-right:5px" class="fas fa-ban borrarProducto" title="Borrar Producto"></a>
                                 
                             </td>
                             </tr>

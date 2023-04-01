@@ -67,7 +67,7 @@ if(isset($_REQUEST['idBorrar'])){
             ?>
       
             <div class="card">
-                <?php echo "<img src='Imagenes/Img6.jpg " .$row['Imagen']."' width='100%' heigth='380'>";""?>
+                <?php echo "<img src='" .$row['Imagen']."' width='100%' heigth='380'>";""?>
                 <div class="card-body">
                     <h5 class="card-tittle"><?php echo $row['Producto']?></h5>
                     <p><span>$<?php echo $row['Precio']?></span></p>

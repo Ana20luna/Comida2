@@ -190,7 +190,7 @@
     ?>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2023 <a href="#">Jorge Grajales</a>.</strong>
+    <strong>Copyright &copy; 2023 <a href="#">Ana Blandon</a>.</strong>
    Todos los derechos reservados.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 1.0.0

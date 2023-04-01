@@ -47,7 +47,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Crear Libros</h1>
+            <h1>Agrgar Platos </h1>
           </div><!-- /.col -->          
       </div><!-- /.container-fluid -->
     </div>
@@ -66,25 +66,23 @@
                                 <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre">
                             </div>
                             
-                            <div class="form-group">
-                                <label for="ISBN">ISBN</label>
-                                <input type="text" name="isbn" id="isbn" class="form-control" placeholder="ISBN">
-                            </div>
+                        
                             <div class="form-group">
                                 <label for="Precio">Precio</label>
                                 <input type="text" name="precio" id="precio" class="form-control" placeholder="Precio">
                             </div>                           
                             <div class="form-group">
-                                <label for="Descripcion">Descripcion</label>
-                               <textarea name="descripcion" id="descripcion" class="form-control" cols="30" rows="10" placeholder="Descripción"></textarea>                           </div>
+                                <label for="Imagen">Imagen</label>
+                               <textarea name="descripcion" id="descripcion" class="form-control" cols="30" rows="10" placeholder="Imagen"></textarea>                           </div>
                             </div>
+
                             <div class="form-group"> 
                             <label for="Seleccionar">Adjuntar una imagen</label>
                                <input type="file" name="file1" id="file1">
                             </div>
                                <div class="form-group">
-                                <button type="submit" name="guardar" class="btn btn-primary">Crear Libro</button>
-                                <button type="reset"  class="btn btn-danger">Cancelar Libro</button>
+                                <button type="submit" name="guardar" class="btn btn-primary">Crear Plato</button>
+                                <button type="reset"  class="btn btn-danger">Cancelar Producto</button>
                                 
                             </div>                
                         </form>

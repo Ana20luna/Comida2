@@ -5,22 +5,22 @@ $conn = mysqli_connect($host,$user,$pw,$db);
 if(isset($_SESSION['idusuario'])==false){
   header("Location:index.php");
 }
-//borrar Producto
+//borrar libro
 if(isset($_REQUEST['idBorrar'])){
-    $idProducto=mysqli_real_escape_string($conn,$_REQUEST['idBorrar']??'');
+    $idlibro=mysqli_real_escape_string($conn,$_REQUEST['idBorrar']??'');
     //instruccion para eliminar con lenguaje sql
-    $sql="DELETE FROM carta WHERE idProducto='".$idProducto."';";
+    $sql="DELETE FROM Productos WHERE idlibro='".$idlibro."';";
     $result=mysqli_query($conn,$sql);
     if($result){
       ?>
       <div class="alert alert-success contents float-right" role="alert">
-        Producto Eliminado!!     
+        Libro Eliminado!!     
        </div>
        <?php
     }else{
       ?>
        <div class="alert alert-warning float-right" role="alert">
-        Error en eliminar Producto!! <?php echo $mysqli_error($conn);?>    
+        Error en eliminar Libro!! <?php echo $mysqli_error($conn);?>    
        </div>
        <?php
     }
@@ -35,7 +35,7 @@ if(isset($_REQUEST['idBorrar'])){
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Producto</h1>
+                    <h1>Productos</h1>
                 </div><!-- /.col -->
 
             </div><!-- /.container-fluid -->
@@ -52,9 +52,12 @@ if(isset($_REQUEST['idBorrar'])){
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Producto</th>
+                                    <th>Nombre</th>
+                                    <th>ISBN</th>
                                     <th>Precio</th>
-                                    <th>Imagen <a href="panel.php?modulo=crearProducto" title="Crear Producto"><i
+                                    <th>Imagen</th>
+                                    <th>Descripción</th>
+                                    <th>Crear Libro <a href="panel.php?modulo=crearLibro" title="Crear Libro"><i
                                                 class="fas fa-user-plus"></i></a>
                                     </th>
                                 </tr>
@@ -64,7 +67,7 @@ if(isset($_REQUEST['idBorrar'])){
                                 <?php
                                     include_once 'conexion.php';
                                     $conn=mysqli_connect($host,$user,$pw,$db);
-                                    $sql="SELECT * FROM Producto;";
+                                    $sql="SELECT * FROM Productos;";
                                     $result=mysqli_query($conn,$sql);
                                     
                                     //estructura de bucle while
@@ -75,12 +78,13 @@ if(isset($_REQUEST['idBorrar'])){
                                <tr>
                             <td><?php echo $row['nombre'] ?> </td>                  
                             <td><?php echo $row['isbn'] ?></td>
-                            <td><?php echo $row['precio'] ?></td>                 
+                            <td><?php echo $row['precio'] ?></td>
+                            <td><?php echo "<img src='".$row['imagen']."' width='50' >";"" ?></td>                 
                             <td><?php echo $row['descripcion'] ?></td>
-                            <td><?php echo "<img src='".$row['imagen']."' width='50' >";"" ?></td>
+                            
                             <td>
-                                <a href="panel.php?modulo=editarProducto&idProducto=<?php echo $row['idProducto']?>"style="margin-right:5px"><i class="fas fa-book-reader" title="Editar Producto"></i></a>
-                                <a href="panel.php?modulo=Producto&idBorrar=<?php echo $row['idProducto']?>" style="margin-right:5px" class="fas fa-ban borrarProducto" title="Borrar Producto"></a>
+                                <a href="panel.php?modulo=editarLibro&idlibro=<?php echo $row['idlibro']?>"style="margin-right:5px"><i class="fas fa-book-reader" title="Editar Libro"></i></a>
+                                <a href="panel.php?modulo=libros&idBorrar=<?php echo $row['idlibro']?>" style="margin-right:5px" class="fas fa-ban borrarLibro" title="Borrar Libro"></a>
                                 
                             </td>
                             </tr>

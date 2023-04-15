@@ -37,7 +37,7 @@
       
       //si el usuario es correcto, va ir a la pagina del panel adaministrador
       if($row){
-        $_SESSION['idusuario'] = $row['idusuario'];
+        $_SESSION['idusuarios'] = $row['idusuarios'];
         $_SESSION['nombre'] = $row['nombre'];
         $_SESSION['email'] = $row['email'];
         

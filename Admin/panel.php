@@ -68,7 +68,7 @@
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
      
-        <a class="nav-link text-dark"  title="Editar Usuario" href="panel.php?modulo=editarUsuario&idusuario=<?php echo $_SESSION['idusuario'];?>">
+        <a class="nav-link text-dark"  title="Editar Usuarios" href="panel.php?modulo=editarUsuario&idusuario=<?php echo $_SESSION['idusuario'];?>">
          <i class="fas fa-user"></i> 
         </a>
         <a class="nav-link text-danger"  title="Salir" href="panel.php?modulo=&sesion=salir">

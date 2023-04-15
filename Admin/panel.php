@@ -157,8 +157,8 @@
        <?php
      }
      //usuarios
-     if($modulo =="usuario"){
-      include_once "consultausuarios.php";
+     if($modulo =="usuarios"){
+      include_once "consultarusuarios.php";
      }
 
      if($modulo =="crearusuario"){

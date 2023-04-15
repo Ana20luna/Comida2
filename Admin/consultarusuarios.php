@@ -35,9 +35,7 @@ if(isset($_REQUEST['idBorrar'])){
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Nombre</h1>
-                    <h1>Email</h1>
-                    <h1>Clave</h1>
+                  
                 </div><!-- /.col -->
 
             </div><!-- /.container-fluid -->
@@ -68,7 +66,7 @@ if(isset($_REQUEST['idBorrar'])){
                                 <?php
                                     include_once 'conexion.php';
                                     $conn=mysqli_connect($host,$user,$pw,$db);
-                                    $sql="SELECT * FROM usuario;";
+                                    $sql="SELECT * FROM usuarios;";
                                     $result=mysqli_query($conn,$sql);
                                     
                                     //estructura de bucle while
@@ -78,9 +76,7 @@ if(isset($_REQUEST['idBorrar'])){
                                     ?>
                                <tr>
                             <td><?php echo $row['nombre'] ?></td>  
-                            <td><?php echo $row['email'] ?></td>
-                            <td><?php echo $row['clave'] ?></td>
-                                       
+                            <td><?php echo $row['email'] ?></td>                                       
                             <td>
                                 <a href="panel.php?modulo=editarusuario&idusuario=<?php echo $row['idusuario']?>"style="margin-right:5px"><i class="fas fa-book-reader" title="Editar usuario"></i></a>
                                 <a href="panel.php?modulo=usuario&idBorrar=<?php echo $row['idusuario']?>" style="margin-right:5px" class="fas fa-ban borrarProducto" title="Borrar usuario"></a>
